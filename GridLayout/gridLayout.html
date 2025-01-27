@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Laout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Grid Layout</h1>
+  <section class="exo1">
+    <h2>Example et Concept</h2>
+    <div class="exo1__container">
+      <div class="exo1__div">1</div>
+      <div class="exo1__div" class='item-titre'>2
+        <h1 class='exo1__title exo1__title--h1'>CSS Grid Layout</h1>
+        <h2 class='exo1__title exo1__title--h2'>New Terminology</h2>
+      </div>
+      <div class="exo1__div">3</div>
+      <div class="exo1__div" data-grid="grid-column">4
+        <p class="exo1__p"><strong class="exo1__strong">Grid Track (Column)</strong> Une piste de grille est l'espace
+          entre deux lignes de grille adjacentes, formant une colonne de grille ou une rangée de grille.</p>
+      </div>
+      <div class="exo1__div">5</div>
+      <div class="exo1__div" data-grid="grid-area">6
+        <p class="exo1__p"><strong class="exo1__strong">Grid Area</strong> Une zone de grille se compose d'une ou
+          plusieurs cellules de grille d'adjacentes. Cette cellule est liée à quatre lignes de grille, une de chaque
+          côté de la zone de grille.</p>
+      </div>
+      <div class="exo1__div" data-grid="grid-cell">7
+        <p class="exo1__p"><strong class="exo1__strong">Grid Cell</strong> La plus petite cellule de grille A est la
+          plus petite unité de la grille. Une cellule de grille est l'intersection d'une ligne de grille et d'une
+          colonne de grille.</p>
+      </div>
+      <div class="exo1__div">8</div>
+      <div class="exo1__div">9</div>
+      <div class="exo1__div">10</div>
+      <div class="exo1__div">11</div>
+      <div class="exo1__div" data-grid="grid-row">12
+        <p class="exo1__p"><strong class="exo1__strong">Grid Track (Row)</strong> Une piste de grille est l'espace entre
+          deux lignes de grille adjacentes, formant une colonne de grille ou une rangée de grille.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Définir la grille</h2>
+    <div class="exo2__gridContainer">
+      <div class="exo2__item">Un <br>Pour définir une grille, il est possible de spécifier ses dimensions en termes de
+        colonnes et de lignes.
+        Les propriétés grid-template-rows et grid-template-columns acceptent une liste de valeurs séparées par des
+        espaces.</div>
+      <div class="exo2__item">Deux</div>
+      <div class="exo2__item">Trois</div>
+      <div class="exo2__item">Quatre</div>
+      <div class="exo2__item">Cinq</div>
+      <div class="exo2__item">Six</div>
+      <div class="exo2__item">Sept</div>
+      <div class="exo2__item">Huit</div>
+      <div class="exo2__item">Neuf</div>
+      <div class="exo2__item">Dix</div>
+      <div class="exo2__item">Onze</div>
+      <div class="exo2__item">Douze</div>
+    </div>
+
+  </section>
+  <section>
+    <h2>Définir les items</h2>
+    <div class="exo3__gridContainer">
+      <div class="exo3__item">Un</div>
+      <div class="exo3__item">Deux</div>
+      <div class="exo3__item">Trois</div>
+      <div class="exo3__item">Quatre</div>
+      <div class="exo3__item">Cinq</div>
+      <div class="exo3__item">Six</div>
+      <div class="exo3__item">Sept</div>
+      <div class="exo3__item">Huit</div>
+      <div class="exo3__item">Neuf</div>
+      <div class="exo3__item">Dix</div>
+      <div class="exo3__item">Onze</div>
+      <div class="exo3__item">Douze</div>
+    </div>
+
+  </section>
+  <section class="exo4">
+    <h2>Grille<br>Implimplicite / Explicite</h2>
+    <div class="exo4__gridContainer">
+      <div class="exo4__item">Un</div>
+      <div class="exo4__item">Deux</div>
+      <div class="exo4__item">Trois</div>
+      <div class="exo4__item">Quatre</div>
+      <div class="exo4__item">Cinq</div>
+      <div class="exo4__item">Six</div>
+      <div class="exo4__item">Sept</div>
+      <div class="exo4__item">Huit</div>
+      <div class="exo4__item">Neuf</div>
+      <div class="exo4__item">Dix</div>
+      <div class="exo4__item">Onze</div>
+      <div class="exo4__item">Douze</div>
+    </div>
+  </section>
+  <section class="exo5">
+    <h2>Grille<br>grid-auto-flow</h2>
+    <div class="exo5__gridContainer">
+      <div class="exo5__item">Un</div>
+      <div class="exo5__item">Deux</div>
+      <div class="exo5__item">Trois</div>
+      <div class="exo5__item">Quatre</div>
+      <div class="exo5__item">Cinq</div>
+      <div class="exo5__item">Six</div>
+      <div class="exo5__item">Sept</div>
+      <div class="exo5__item">Huit</div>
+      <div class="exo5__item">Neuf</div>
+      <div class="exo5__item">Dix</div>
+      <div class="exo5__item">Onze</div>
+      <div class="exo5__item">Douze</div>
+    </div>
+  </section>
+
+  <section class="exo6">
+    <h2>Grille<br>Question de taille</h2>
+    <div class="exo6__gridContainer">
+      <div class="exo6__item ">Dans ma cellule</div>
+      <div class="exo6__item item2">width 50%</div>
+      <div class="exo6__item item3">width 130%</div>
+      <div class="exo6__item item4">width 130%</div>
+      <div class="exo6__item item5">Dans ma cellule</div>
+    </div>
+  </section>
+
+  <section class="exo7">
+    <h2>Grille<br>grid-template-areas</h2>
+    <div class="exo7__gridContainer">
+      <header class="exo7__header">Header</header>
+      <main class="exo7__main">Main</main>
+      <aside class="exo7__aside">Aside</aside>
+      <footer class="exo7__footer">Footer</footer>
+    </div>
+  </section>
+</body>
+
+</html>

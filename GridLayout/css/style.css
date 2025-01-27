@@ -1,0 +1,452 @@
+
+@import url("https://fonts.googleapis.com/css?family=Scope+One|Open+Sans:700");
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+/* MiniReset + Code Base */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  color: #18314F;
+  background: #f5f5f5;
+}
+
+h1 {
+  margin: 3em 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 3em;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  color: rgb(54, 122, 203);
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 20%;
+  margin: 2em auto 0;
+  border-bottom: 1px solid #367acb;
+}
+
+section {
+  width: 80%;
+  margin: 3.125rem auto;
+  padding:  3.125rem;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+code{
+  color: #367acb;
+}
+
+
+/* -----------------------------------------
+   Exo 1 : Exemple et Concept
+----------------------------------------- */
+
+/* 
+  ➩ Ouvrir l'outil Grille de l'inspecteur d'élément > Mise en Page
+*/
+
+.exo1__container {
+  display: grid;
+  grid-template-columns: 10vw 25vw repeat(2,1fr);
+  grid-template-rows: repeat(10, min-content);
+  grid-gap: 1rem;
+}
+
+[data-grid='grid-cell'] {
+  border-color: #ff0048;
+}
+
+[data-grid='grid-cell']:hover {
+  background: #ff0048;
+}
+
+[data-grid='grid-column'] {
+  grid-column: 4;
+  grid-row: 1 / 6;
+
+  border-color: rgba(2, 143, 118, 0.8);
+}
+
+[data-grid='grid-column']:hover {
+  background: rgba(2, 143, 118, 0.8);
+}
+
+[data-grid='grid-area'] {
+  grid-row: span 3;
+
+  border-color: #8a0054;
+}
+[data-grid='grid-area']:hover {
+  background: #8a0054;
+}
+
+[data-grid='grid-row'] {
+  grid-column: 1 / 5;
+  grid-row: 5;
+
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(38, 95, 163, 0.8);
+}
+
+[data-grid='grid-row']:hover {
+  background: rgba(38, 95, 163, 0.8);
+}
+
+.exo1__container {
+  margin: 1rem;
+  font-family: 'Scope One', sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: #717388;
+  background: #fff;
+}
+
+.exo1__title{
+  margin: 0;
+}
+
+.exo1__div {
+  border: 1px solid #ddd;
+  padding: .75vw 1vw;
+}
+
+.exo1__title--h1 {
+  padding-top: .5rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #717388;
+}
+
+.exo1__title--h2 {
+  font-size: 1.25rem;
+  color: #999;
+}
+
+[data-grid] {
+  border-width: 1px;
+  border-style: solid;
+}
+[data-grid]:hover {
+  color: #fff;
+}
+
+
+.exo1__p {
+  line-height: 1.5;
+}
+
+.exo1__strong {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width:40em){
+  .exo1__container {
+    display: grid;
+    grid-gap: .75rem;
+    grid-template-columns: minmax(20rem, 100vw);
+    grid-template-rows: repeat(10, min-content);
+  }
+
+  [data-grid='grid-column'] {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  [data-grid='grid-area'] {
+    grid-row: 6;
+  }
+
+  [data-grid='grid-row'] {
+    grid-column: 1;
+    grid-row: 12;
+  }
+
+}
+
+/* -----------------------------------------
+   Exo 2 : Définir la Grille
+----------------------------------------- */
+/*
+  1/ Définir la grille
+  display: grid | inline-grid | subgrid    
+
+  2/ Définir le nombre et la taille de votre grille
+  grid-template-rows
+  grid-template-columns
+  grid-template : propriété raccourcie pour [grid-template-rows]/[grid-template-columns]
+
+  3/ Définir des gouttières
+  grid-column-gap
+  grid-row-gap
+  grid-gap : propriété raccourcie pour [grid-row-gap]/[grid-columns-gap]
+
+  4/ Dimensions
+  En plus des dimensions de longueur et de pourcentage, les pistes de grille peuvent utiliser 
+    - des mots-clés de dimensionnement intrinsèques : min-content, max-content, fit-content(dim).
+    - l'unité fr : longueur flexible qui décrit une part de l'espace disponible dans le conteneur de la grille
+    - minmax()
+    - repeat()
+    - auto-fill et auto-fit : grid-template-columns: repeat(auto-fill, 200px);
+    fill: remplir / fit: ajuster
+
+*/
+
+/* Element Grid-Container */
+.exo2__gridContainer{
+  /* 
+    ➩ Définir la grille 
+  */
+
+  /* 
+    ➩ Définir le nombre et la taille de votre grille 
+  */
+
+  
+  /* 
+    ➩ Définir des gouttières 
+  */
+
+}
+
+/* Éléments Grid-Item */
+.exo2__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+
+
+/* -----------------------------------------
+   Exo 3 : Positionner les Grid-items
+----------------------------------------- */
+/*
+  grid-column-start
+  grid-column-end
+  grid-row-start
+  grid-row-end
+  grid-area : propriété raccourcie pour [grid-row-start], [grid-column-start], [grid-row-end] et [grid-column-end]
+*/
+
+/* Element GridContainer */
+.exo3__gridContainer{
+  /* 
+    ➩ Définir la grille 
+  */
+
+  /* 
+    ➩ Définir le nombre et la taille de votre grille 
+  */
+
+  
+  /* 
+    ➩ Définir des gouttières 
+  */
+
+}
+
+/* Tous les éléments GridItem */
+.exo3__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+/* Element GridItem le premier*/
+[class="exo3__item"]:nth-child(1){
+  border: solid 1px blue;
+  background: rgb(43, 88, 156);
+  color: #ccc;
+
+  /* 
+    ➩ Position : Il occupe deux colonnes et trois lignes 
+  */
+
+}
+
+/* Element GridItem le second */
+[class="exo3__item"]:nth-child(2){
+  color: #ccc;
+  border: solid 1px red;
+  background: rgb(180, 22, 102);
+  /* 
+    ➩ Position : Il occupe deux colonnes et trois lignes 
+  */
+ 
+
+}
+
+/* -----------------------------------------
+   Exo 4 : Grille explicite / implicite
+----------------------------------------- */
+/*
+  grid-auto-rows
+  grid-auto-columns
+*/
+
+.exo4__gridContainer{
+  /* 
+    ➩ Définir la grille 
+  */
+
+  /*
+    ➩  Définir le nombre et la taille de votre grille 
+  */
+
+  /*
+    ➩  Définir des gouttières 
+  */
+
+  /*
+    ➩  Définir la taille d'une grille implicite 
+  */
+
+}
+
+.exo4__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+/* -----------------------------------------
+   Exo 5 : grid-auto-flow
+----------------------------------------- */
+/*
+  La propriété grid-auto-flow permet de contrôler la façon dont fonctionne l'algorithme de placement automatique.
+  grid-auto-flow: [ row | column ] || dense
+*/
+
+.exo5__gridContainer{
+  display: grid;
+  grid-template-rows: minmax(8rem,auto) 8rem;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 8rem;
+  grid-auto-columns: 1fr;
+
+  /* 
+    ➩ Testez le positionnement automatique 
+  */
+
+  grid-gap: .25rem;
+}
+
+.exo5__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+/* -----------------------------------------
+   Exo 6 : Question de taille
+----------------------------------------- */
+
+.exo6__gridContainer{
+  display: grid;
+  grid-template-rows: repeat(4, 8rem);
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: .25rem;
+}
+
+.exo6__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+/* Largeur de 50% */
+.item2{
+  grid-area: 2/1/3/2;
+  width: 50%
+}
+
+/* Largeur de 130% */
+.item3{
+  grid-area: 3/1/4/2;
+  width:130%
+}
+
+/* Largeur de 130% */
+.item4{
+  grid-area: 4/1/5/2;
+  width:130%
+}
+
+.item5{
+  grid-area: 4/2/5/3;
+  background: rgba(180, 22, 102,.3)
+}
+
+
+/* -----------------------------------------
+   Exo 7 : grid-template-areas
+----------------------------------------- */
+.exo7__gridContainer{
+  display:grid;
+  grid-template-rows: repeat(3, 11rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .25rem;
+
+  /* Création d'un template avec template areas*/
+
+}
+
+.exo7__item {
+  padding: 1em;
+  color: #717388;
+  background: rgba(54, 122, 203,0.3);
+}
+
+.exo7__header{
+  /* Nommer la zone */
+  
+  background: rgba(70, 99, 148,0.5);
+}
+
+.exo7__main{
+  /* Nommer la zone */
+
+  background: rgba(139, 70, 148,0.5);
+}
+
+.exo7__aside{
+  /* Nommer la zone */
+
+  background: rgba(86, 0, 182,0.5);
+}
+
+.exo7__footer{
+  /* Nommer la zone */
+
+  background: rgba(70, 148, 83,0.5);
+}
+
+
+/*  Suite sur le site : https://cssgridgarden.com/#fr */
