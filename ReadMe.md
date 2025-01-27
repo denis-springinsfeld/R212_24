@@ -90,8 +90,11 @@ Si vous souhaitez vérifier vos réglages, vous pouvez utiliser la commande `git
 #### 4.1 À partir d'un répertoire existant
 
 [x] Créez sur Github un nouveau dépôt nommé `R212`
+
 [x] Créez un dossier sur votre ordinateur, nommé `R212`
+
 [x] Créer un fichier `README.md` dans ce dossier, et ajoutez-y un titre et une description de votre projet.
+
 [x] Ouvrir ce dossier dans VSCode, ouvrir le terminal et tapez les commandes suivantes :
 
 ```bash
@@ -105,11 +108,16 @@ Si vous souhaitez vérifier vos réglages, vous pouvez utiliser la commande `git
 
 ### 5. Modifier et envoyer des fichiers
 
-[x] Modifier votre fichier README.md.
+[x] Modifier votre fichier `README.md`.
+
 [x] Dans la barre d'outils de VSCode, cliquer sur l'icône `Source Control` (Ctrl+Shift+G) - celui-ci doit afficher un `1` pour indiquer qu'il y a un fichier modifié en attente.
+
 [x] Cliquer sur `+` pour ajouter le fichier modifié à la liste des fichiers à commiter.
+
 [x] Saisir un message de commit dans la zone de texte `Message` en haut de l'écran.
+
 [x] Cliquer sur la coche pour valider le commit.
+
 [x] Cliquer sur les `...` à droite de la barre d'outils et sélectionner `Push` pour envoyer vos modifications sur Github.
 
 **Vous venez de réaliser votre premier commit et push sur Github.**
