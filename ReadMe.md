@@ -89,9 +89,9 @@ Si vous souhaitez vérifier vos réglages, vous pouvez utiliser la commande `git
 
 #### 4.1 À partir d'un répertoire existant
 
-- [x] Créez sur Github un nouveau dépôt nommé `R212`
+- [x] Créer sur Github un nouveau dépôt nommé `R212`
 
-- [x] Créez un dossier sur votre ordinateur, nommé `R212`
+- [x] Créer un dossier sur votre ordinateur, nommé `R212`
 
 - [x] Créer un fichier `README.md` dans ce dossier, et ajoutez-y un titre et une description de votre projet.
 
@@ -105,6 +105,10 @@ Si vous souhaitez vérifier vos réglages, vous pouvez utiliser la commande `git
 #### 4.2 En clonant un dépôt existant
 
 - [x] Cloner le dépôt sur votre ordinateur.
+
+```bash
+    git clone [adresse repository]
+```
 
 ### 5. Modifier et envoyer des fichiers
 
