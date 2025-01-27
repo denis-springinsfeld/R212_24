@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata 3 | Template v1</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .parent {
+        height: 100%;
+        /* Création d'un contexte GridLayout */
+
+        /* Création d'un template columns et rows */
+      }
+
+      .header {
+        /* Placement du header */
+
+        padding: 2rem;
+        background: lightpink;
+      }
+
+      .sidebar--left {
+        /* Placement du sidebar */
+
+        background: lightblue;
+      }
+
+      .main {
+        /* Placement du main */
+
+        background: coral;
+      }
+
+      .sidebar--right {
+        /* Placement du sidebar */
+
+        background: yellow;
+      }
+
+      .footer {
+        /* Placement du footer */
+
+        padding: 2em;
+        text-align: center;
+        background: wheat;
+      }
+
+      [class^="sidebar"] {
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <header class="header">
+        <h1>Header</h1>
+      </header>
+      <aside class="sidebar--left">Left Sidebar</aside>
+      <main class="main"></main>
+      <aside class="sidebar--right">Right Sidebar</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata 6 | Span Grid</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .parent {
+        height: 100%;
+        /* Contexte Grid */
+
+        /* Template columns */
+      }
+
+      /* Cible toutes les div sauf la div de classe .parent*/
+      div:not(.parent) {
+        /* Contexte Grid */
+
+        /* Centrer tous les enfants */
+      }
+
+      .span-12 {
+        /* Placement */
+
+        background: lightpink;
+      }
+
+      .span-6 {
+        /* Placement */
+
+        background: lightblue;
+      }
+
+      .span-5 {
+        /* Placement */
+
+        background: rgb(95, 172, 197);
+      }
+
+      .span-4 {
+        /* Placement */
+
+        background: coral;
+      }
+
+      .span-2 {
+        /* Placement */
+
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="span-12">Span 12</div>
+      <div class="span-6">Span 6</div>
+      <div class="span-4">Span 4</div>
+      <div class="span-5">Span 5</div>
+      <div class="span-2">Span 2</div>
+    </div>
+  </body>
+</html>

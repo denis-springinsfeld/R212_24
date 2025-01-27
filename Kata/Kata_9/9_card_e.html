@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Aspect Ratio</title>
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
+      figure,
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 2em;
+        font-family: sans-serif;
+        background: rgb(17 24 39);
+      }
+
+      .container-grid {
+        height: 100%;
+        /* Contexte Grid */
+
+        /* Gestion du nombre de colonnes automatique - taille min 35 caractères */
+
+        /* Taille des ligne en fonction du contenu */
+
+        /* Gouttière 1rem */
+
+        /* Place les grid-items au centre de la cellule */
+      }
+
+      .card {
+        /* Taille max 30rem */
+
+        /* Contexte Flex */
+
+        /* En colonne */
+
+        /* Ratio 2/3 */
+
+        background: rgb(31 41 55);
+        border-radius: 5px;
+        border: solid 1px rgba(128, 128, 128, 0.747);
+        overflow: hidden;
+      }
+
+      .card__visual > img {
+        max-width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+      }
+
+      .card__title {
+        padding-inline: 1rem;
+        color: hsl(0, 0%, 100%);
+      }
+
+      .card__desc {
+        padding-inline: 1rem;
+        padding-bottom: 2rem;
+        line-height: 1.4;
+        color: hsl(0, 0%, 74%);
+      }
+
+      .card__btn {
+        align-self: flex-start;
+        margin-inline: 1rem;
+        min-height: 36px;
+        min-width: 12ch;
+        background-color: rgb(26, 86, 219);
+        border-radius: 2px;
+        border: none;
+        color: rgb(253, 253, 253);
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="container-grid">
+      <li class="container-grid__item">
+        <figure class="card">
+          <div class="card__visual">
+            <img
+              src="https://picsum.photos/480/320/?random
+                  "
+              alt=""
+            />
+          </div>
+          <figcaption>
+            <h1 class="card__title">Card Title</h1>
+            <p class="card__desc">
+              Descriptive text goes here. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Asperiores fugit non illum
+              perspiciatis molestias!
+            </p>
+            <button class="card__btn">click</button>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="container-grid__item">
+        <figure class="card">
+          <div class="card__visual">
+            <img
+              src="https://picsum.photos/480/320/?random=2
+                "
+              alt=""
+            />
+          </div>
+          <figcaption>
+            <h1 class="card__title">Card Title</h1>
+            <p class="card__desc">Descriptive text goes here</p>
+            <button class="card__btn">click</button>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="container-grid__item">
+        <figure class="card">
+          <div class="card__visual">
+            <img
+              src="https://picsum.photos/480/320/?random=3
+                "
+              alt=""
+            />
+          </div>
+          <figcaption>
+            <h1 class="card__title">Card Title</h1>
+            <p class="card__desc">Descriptive text goes here</p>
+            <button class="card__btn">click</button>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </body>
+</html>

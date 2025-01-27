@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata 2 | Pancake</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: rgb(75, 73, 73);
+        }
+
+        .parent{
+            /* Hauteur de l'élément à 100% du parent soit 100vh(100%) du viewport */
+            height: 100%;
+            /* Création d'un contexte GridLayout */
+
+            /* Création d'un template row : 
+            . hauteur du '.header' = hauteur de son contenu
+            . hauteur du '.main' = hauteur restante
+            . hauteur du '.footer' = hauteur de son contenu*/
+
+        }
+
+        .parent > *{
+            padding: 2em;
+        }
+
+        .header{
+            background: hsl(187, 61%, 79%);;
+        }
+        .main{
+            background: hsl(23, 83%, 82%);;
+        }
+        .footer{
+            background: hsl(335, 82%, 86%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent">
+    <header class="header">Header</header>
+    <main class="main">Main</main>
+    <footer class="footer">Footer</footer>
+</div>
+    
+</body>
+</html>

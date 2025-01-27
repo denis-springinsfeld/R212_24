@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata 1 | Sibebar</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+        background: hsl(198, 32%, 74%);
+      }
+
+      .parent {
+        height: 100%;
+        /* Création d'un contexte GridLayout */
+
+        /* Création d'un template de colonne */
+      }
+
+      .sidebar {
+        padding: 0.5em;
+        font-size: 2rem;
+        background: hsl(40, 32%, 74%);
+      }
+
+      .main {
+        /* Création d'un contexte GridLayout */
+
+        /* Centrer l'élément sur les deux axes */
+
+        padding: 0.5em;
+        background: hsl(313, 32%, 74%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="sidebar">Min: 150px / Max: 25%</div>
+      <main class="main">
+        Cet élément prend la seconde position de la grille (1fr). Il prend donc
+        l'espace restant.
+      </main>
+    </div>
+  </body>
+</html>
