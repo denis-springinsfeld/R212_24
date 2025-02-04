@@ -1,0 +1,117 @@
+@import "reset.css";
+
+body {
+  padding: 3rem 4rem 0;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fff;
+  background-color: #070707;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-block-end: 1em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  margin-block-end: 2rem;
+}
+
+/*
+Testez différentes valeurs pour grid-template-columns pour voir comment elles affectent la disposition des cartes.
+*/
+
+.cards--grid-rem {
+  /* ➩ 5 colonnes de 7rem */
+
+  .card {
+    background-color: #b5b5b5;
+  }
+}
+.cards--grid-fr {
+  /* ➩ 5 colonnes de 1fr */
+
+  .card {
+    background-color: #98b49b;
+  }
+}
+
+.cards--grid-minmax {
+  /* ➩ 5 colonnes de 7rem minimum et 1fr maximum */
+
+  .card {
+    background-color: #9895d0;
+  }
+}
+
+/*
+    auto-fill 
+    REMPLIT la ligne avec autant de colonnes qu'elle peut en contenir. Ainsi, il crée des colonnes implicites chaque fois qu'une nouvelle colonne peut tenir, car il essaie de REMPLIR la ligne avec autant de colonnes que elle le peut. Les colonnes nouvellement ajoutées peuvent être vides, mais elles occuperont toujours un espace désigné dans la ligne.
+
+    Si la largeur totale est de 721px
+    La largeur minimale d'une colonne est de 7rem
+    Nombre de colonnes qu'une ligne peut avoir = 7
+    Espace restant = 21px
+    21 / 7 = 3
+    Largeur réelle d'une colonne = 100 + 3 = 103
+*/
+
+.cards--grid-auto-fill {
+  /*
+    ➩ Utiliser auto-fill pour créer des colonnes de taille égale à 7rem minimum et 1fr maximum.
+  */
+
+  .card {
+    background-color: #6b6683;
+  }
+}
+
+/*
+  auto-fit 
+  S'ADAPTE à la largeur de la grille.
+  Cette valeur se comporte comme auto-fill mais, une fois que les objets sont placés, toutes les pistes répétées qui sont vides sont repliées (0px).
+
+  Si la largeur totale est de 721px
+  La largeur minimale d'une colonne est de 100px
+  Largeur réelle d'une colonne = 721 / 5 = 144.2
+*/
+.cards--grid-auto-fit {
+  /*
+    ➩ Utiliser auto-fit pour créer des colonnes de taille égale à 7rem minimum et 1fr maximum.
+  */
+
+  .card {
+    background-color: #a8808f;
+  }
+}
+
+.cards--grid-auto-fit-bis {
+  /*
+    ➩ Utiliser auto-fit pour créer des colonnes de taille égale à 7rem minimum et 1fr maximum. Si la largeur d'une colonne est inférieure à 7rem, elle sera réduite.
+  */
+
+  .card {
+    background-color: #a88080;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  color: #070707;
+  border: 5px solid currentColor;
+  border-radius: 0.5rem;
+  outline: 1px dotted currentColor;
+  outline-offset: -15px;
+}
