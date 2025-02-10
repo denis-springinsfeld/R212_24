@@ -1,0 +1,59 @@
+@import "reset.css";
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(31, 106, 219);
+}
+
+/* - Burger -- */
+.burger {
+  border: solid 1px red;
+  cursor: pointer;
+}
+
+/* -- État Initial */
+
+.burger__line {
+  /* Propriétés des transitions et leurs durées */
+  /* translate .3s, rotate .4s et opacity .3s */
+
+  /* Transitions état final :hover > état initila | Retour */
+  /* rotation > translate .4s > opacité .7s */
+}
+
+/* Origine des transformations au centre de l'élément SVG (par défaut 0,0 pour ses enfants) */
+.burger__line:nth-child(1) {
+  /* Origine de la transformation pour la première ligne (16,6) */
+  /* Ici on détermine en fonction de son dessin l'origine des transformations */
+}
+
+.burger__line:nth-child(2) {
+  /* Opacité à 1 */
+}
+
+.burger__line:nth-child(3) {
+  /* Origine de la transformation pour la dernière ligne (16,26) */
+  /* Ici on détermine en fonction de son dessin l'origine des transformations */
+}
+
+/* - hover ---- */
+
+.burger:hover .burger__line {
+  /* Transitions état initila > état final :hover | Allé 
+  opacity 0s > translate .3s > rotate .6s*/
+}
+
+.burger:hover .burger__line:nth-child(1) {
+  /* Translate et rotate */
+}
+
+.burger:hover .burger__line:nth-child(2) {
+  /* Opacity */
+}
+
+.burger:hover .burger__line:nth-child(3) {
+  /* Translate et rotate */
+}

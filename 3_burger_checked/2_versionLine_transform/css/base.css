@@ -1,0 +1,79 @@
+@import "reset.css";
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(219, 185, 31);
+}
+
+/* -- Checkbox : Disparition de l'élément checkbox --- */
+input[type="checkbox"] {
+  appearance: none;
+}
+
+/* -- Label --- */
+.burger__label {
+  cursor: pointer;
+}
+
+/* - Burger -- */
+svg {
+  border: solid 1px red;
+}
+
+/* On détermine l'origine des transformations : ici le centre des éléments notre svg (16x16) */
+.burger__line:nth-child(1) {
+  /* Origine de la transformation pour la première ligne (16,6) */
+  /* Ici on détermine en fonction de son dessin l'origine des transformations */
+
+  /* Transitions état final :checked > état initila | Retour */
+}
+
+.burger__line:nth-child(2) {
+  /* Opacité à 1 */
+
+  /* Transitions état final :checked > état initila | Retour */
+}
+
+.burger__line:nth-child(3) {
+  /* Origine de la transformation pour la dernière ligne (16,26) */
+  /* Ici on détermine en fonction de son dessin l'origine des transformations */
+
+  /* Transitions état final :checked > état initila | Retour */
+}
+
+/* - hover ---- */
+
+.burger__label:hover .burger__line:nth-child(1) {
+  /* Translation sur l'axe des y de 3px */
+}
+
+.burger__label:hover .burger__line:nth-child(2) {
+  /* Opacité à 0 */
+
+  /* Transitions état initial > état final :checked | Allé */
+}
+
+.burger__label:hover .burger__line:nth-child(3) {
+  /* Translation sur l'axe des y de -3px */
+}
+
+/* - Checked ---- */
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(1) {
+  /* Translation et rotation */
+
+  /* Transitions état initial > état final :checked | Allé */
+}
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(2) {
+  /* Opacité */
+}
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(3) {
+  /* Translation et rotation */
+
+  /* Transitions état initial > état final :checked | Allé */
+}

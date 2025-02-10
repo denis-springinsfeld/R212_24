@@ -1,0 +1,74 @@
+@import "reset.css";
+
+html,
+body {
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  font-family: sans-serif;
+  background: rgb(124, 141, 162);
+}
+
+.main {
+  display: flex;
+  gap: 4rem;
+}
+
+.container {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  border: black dashed 2px;
+}
+
+/* -- Pour un élément HTML ------------------------------------- */
+.square {
+  aspect-ratio: 1;
+  background: rgba(224, 74, 74, 0.7);
+
+  /* ➩ Testez une rotation et un changement d'origine */
+  /* Par défaut, l'origine d'une transformation est center. */
+
+  /* ➩ Testez l'animation */
+}
+
+/* -- Pour un élément SVG ------------------------------------- */
+
+/* - SVG est ici un élément de type HTML*/
+.svg {
+  overflow: visible;
+  /* ➩ Testez l'animation sur l'élément SVG 
+  Quel est l'origine de la transformation ? */
+}
+
+/* - SVG rect */
+.svg__square {
+  fill: rgba(94, 74, 224, 0.7);
+  /* ➩ Testez une rotation et un changement d'origine */
+  /* Par défaut, l'origine d'une transformation est (0,0). */
+
+  /* ➩ Testez l'animation sur l'élément SVG */
+}
+
+/* SVG line */
+.svg__line {
+  /* ➩ Testez une rotation et un changement d'origine */
+  /* Par défaut, l'origine d'une transformation est (0,0). */
+  /* Attention ici transform-origin: 50% 50% fait réf au svg et non à l'élément line  */
+
+  /* ➩ Testez l'animation sur l'élément SVG */
+}
+
+/* Animation spin */
+@keyframes spin {
+  100% {
+    rotate: 360deg;
+  }
+}

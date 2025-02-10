@@ -1,0 +1,60 @@
+@import "reset.css";
+
+/* - Global --- */
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --fg: var(--color-black);
+  --bg: var(--color-white);
+}
+
+body {
+  font: 900 1rem/1.4 sans-serif;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+/* -- label --- */
+
+.label {
+  display: inline-flex;
+  margin: 1em auto;
+  padding: 0.5rem 1rem;
+  color: var(--fg);
+  border: solid 2px var(--fg);
+
+  border-radius: 0.5rem;
+}
+
+/* -- Element à modifier --- */
+
+.control-me {
+  padding: 1em;
+  transition: 0.3s ease-in-out;
+}
+
+/* -- Checkbox --- */
+
+input[type="checkbox"] {
+  /* Faire disparaitre la checkbox */
+  /* appearance: none; */
+}
+
+/* + selecteur de frère adjacent direct (Les sélecteurs de voisin direct) */
+/* Le combinateur '+' permet de sélectionner les nœuds qui suivent immédiatement un élément donné.  */
+input[type="checkbox"]:checked + label {
+  /* Opacitée de 50% sur le label (frére adjacent direct) lorsque la checkbox est checked */
+}
+
+/* selecteur de frères proche ( sélecteurs de voisins) */
+/* Le combinateur '~' permet de sélectionner les nœuds qui suivent un élément et qui ont le même parent. */
+input[type="checkbox"]:checked ~ .control-me {
+  /* Change la couleur d'arrière plan de cet élément frère lorsque */
+}
+
+/* La pseudo-classe :has() permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément  */
+
+body:has(input[type="checkbox"]:checked) {
+  /* Change la couleur d'arrière plan du body lorsque celui possède un enfant input de type checkbox avec l'état checked  */
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "reset.css";
+
+:root {
+  --clr-bg: #17a390;
+  --clr-white: #ffffff;
+}
+
+body {
+  background: var(--clr-bg);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button ------------------------------------- */
+
+.btn-menu {
+  /* Taille du button */
+  --_size: 320px;
+  position: relative;
+  width: var(--_size);
+  height: var(--_size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  border: solid 1px red;
+}
+
+/* Barres Burger */
+.btn-menu::after,
+.btn-menu::before,
+.btn-menu__bar {
+  content: "";
+  display: block;
+  /* width 280px*/
+  /* height 40px */
+
+  /* margin block 20px */
+
+  background: var(--clr-white);
+  border-radius: 20px;
+  opacity: 1;
+
+  /* Ajouter des transitions aux propriétés translate .3s, rotate .4s et opacity .3s : état hover > état initial | Retour */
+  /* transition : propriété durée timing-function delay */
+
+  /* Géstion des delay : rotate > translate > opacité */
+}
+
+/* Au survol l'élément de classe btn-menu__bar est ciblé */
+.btn-menu:hover .btn-menu__bar {
+  /* Opacité à 0 */
+
+  /* état initial > état hover | Allé */
+  /* Gestion des delay opacité > translate > rotate  */
+}
+
+/* Au survol le pseudo-élément ::before est ciblé */
+.btn-menu:hover::before {
+  /* Translation sur l'axe des Y */
+
+  /* Rotation */
+
+  /* État initial > état hover | Allé */
+  /* Gestion des delay opacité > translate > rotate  */
+}
+
+/* Au survol le pseudo-élément ::after est ciblé */
+.btn-menu:hover::after {
+  /* Translation sur l'axe des Y */
+
+  /* Rotation */
+
+  /* État initial > état hover | Allé */
+  /* Gestion des delay opacité > translate > rotate  */
+}

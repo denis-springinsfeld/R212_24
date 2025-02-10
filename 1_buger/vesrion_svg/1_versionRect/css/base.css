@@ -1,0 +1,63 @@
+@import "reset.css";
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(31, 106, 219);
+}
+
+/* - Burger -- */
+.burger {
+  cursor: pointer;
+}
+
+.burger__svg {
+  border: solid 1px red;
+}
+
+/* - Burger -- */
+
+.burger__line {
+  /* Permet de placer l'origine des transformations au centre de l'élément SVG (par défaut 0,0 pour ses enfants) */
+
+  /* On détermines les propriétés des transitions et leurs durées  y .3s  rotate .4s opacity .3s */
+
+  /* Transition état final hover > état Initial | Retour */
+  /* On détermine les différents delay pour temporiser les transitions */
+}
+/* -- État Initial ------------------------ */
+.burger__line:nth-child(1) {
+  /* Ligne haut */
+  /* État Initial ici pas de modifications */
+}
+
+.burger__line:nth-child(2) {
+  /* Ligne centrale */
+  /* État Initial ici pas de modifications */
+}
+
+.burger__line:nth-child(3) {
+  /* Ligne du bas */
+  /* État Initial ici pas de modifications */
+}
+
+/* - État Final :hover --------------------- */
+
+.burger:hover .burger__line {
+  /* Transition état initial > état final :hover | Allé */
+  /* On détermine les différents delay pour temporiser les transitions */
+}
+
+.burger:hover .burger__line:nth-child(1) {
+  /* État Final */
+}
+
+.burger:hover .burger__line:nth-child(2) {
+  /* État Final */
+}
+
+.burger:hover .burger__line:nth-child(3) {
+  /* État Final */
+}

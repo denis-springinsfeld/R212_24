@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Origine de la transformation</title>
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body>
+    <div class="page">
+      <h1>Transform-origin</h1>
+      <main class="main">
+        <div class="container">
+          <!-- HTML element -->
+          <div class="square"></div>
+        </div>
+        <div class="container">
+          <!-- HTML element -->
+          <svg viewbox="0 0 32 32" class="svg">
+            <!-- SVG element -->
+            <rect class="svg__square" x="0" y="0" width="32" height="32"></rect>
+          </svg>
+        </div>
+        <div class="container">
+          <!-- HTML element -->
+          <svg viewbox="0 0 32 32" class="svg">
+            <!-- SVG element -->
+            <line
+              class="svg__line"
+              x1="2"
+              y1="10"
+              x2="30"
+              y2="10"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+            ></line>
+          </svg>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

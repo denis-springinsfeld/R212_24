@@ -1,0 +1,86 @@
+@import "reset.css";
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(219, 185, 31);
+}
+
+/* -- Checkbox : Disparition de l'élément checkbox --- */
+input[type="checkbox"] {
+  appearance: none;
+}
+
+/* -- burger__Label --- */
+.burger__label {
+  cursor: pointer;
+}
+
+/* - Burger -- */
+.burger__svg {
+  border: solid 1px red;
+}
+
+/* - Burger -- */
+
+.burger__line {
+  /* Permet de placer l'origine des transformations au centre de l'élément SVG (par défaut 0,0 pour ses enfants) */
+}
+/* État Initial ------------------------------ */
+/* On détermine l'origine des transformations : ici le centre des éléments notre svg (32x32) */
+.burger__line:nth-child(1) {
+  /* Transitions  état final :checked > état initial | Retour */
+}
+
+.burger__line:nth-child(2) {
+  /* Modifications */
+
+  /* Transition  état final :checked > état initial | Retour */
+}
+
+.burger__line:nth-child(3) {
+  /* Transition  état final :checked > état initial | Retour */
+}
+
+/* - État Final :hover ------------------------ */
+
+.burger__label:hover .burger__line:nth-child(1) {
+  /* Modifications */
+}
+
+.burger__label:hover .burger__line:nth-child(2) {
+  /* Modifications */
+
+  /* Transition état initila > état final :hover | Allé */
+}
+
+.burger__label:hover .burger__line:nth-child(3) {
+  /* L'ordonné de la ligne est de 21 */
+}
+
+/* - Checked ---- */
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line {
+}
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(1) {
+  y: 14px;
+  rotate: 45deg;
+  /* Transition état initial > état final :checked | Allé */
+  /* transition: y .4s 0s, rotate .3s .5s; */
+  transition-delay: 0s, 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(3) {
+  y: 14px;
+  rotate: -45deg;
+  /* Transition état initial > état :checked | Allé */
+  /* transition: y .4s 0s, rotate .3s .5s; */
+  transition-delay: 0s, 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .burger__label .burger__line:nth-child(2) {
+  opacity: 0;
+}
