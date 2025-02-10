@@ -57,14 +57,6 @@ body {
   /* Géstion des delay : rotate > translate > opacité */
 }
 
-/* Au survol l'élément de classe btn-menu__bar est ciblé */
-.btn-menu:hover .btn-menu__bar {
-  /* Opacité à 0 */
-
-  /* état initial > état hover | Allé */
-  /* Gestion des delay opacité > translate > rotate  */
-}
-
 /* Au survol le pseudo-élément ::before est ciblé */
 .btn-menu:hover::before {
   /* Translation sur l'axe des Y */
@@ -72,6 +64,14 @@ body {
   /* Rotation */
 
   /* État initial > état hover | Allé */
+  /* Gestion des delay opacité > translate > rotate  */
+}
+
+/* Au survol l'élément de classe btn-menu__bar est ciblé */
+.btn-menu:hover .btn-menu__bar {
+  /* Opacité à 0 */
+
+  /* état initial > état hover | Allé */
   /* Gestion des delay opacité > translate > rotate  */
 }
 
