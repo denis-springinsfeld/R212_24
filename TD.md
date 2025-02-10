@@ -15,11 +15,11 @@ https://jonsuh.com/hamburgers/
 
 ## Exercice 3
 
-Chekbox burger.
+Chekbox.
 
 ## Exercice 4
 
-Burger animé
+Burger checked animé
 
 ## Exercice 5
 
