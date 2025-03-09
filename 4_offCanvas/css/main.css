@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+@layer theme {
+  /* - Variables ------------------ */
+  :root {
+    /* Primitive Tokens */
+    --clr-off-white: hsl(36, 100%, 99%);
+    --clr-grayish-blue: hsl(233, 8%, 79%);
+    --clr-dark-grayish-blue: hsl(236, 13%, 42%);
+    --clr-very-dark-blue: hsl(240, 100%, 5%);
+    --clr-orange-dark: hsl(5, 82%, 63%);
+    --clr-orange: hsl(33, 76%, 60%);
+
+    /* Font */
+    --ff-primary: "Inter", sans-serif;
+
+    /* Sementic Tokens : Contextualisation des couleurs */
+    --bg-color: var(--clr-dark-grayish-blue);
+    --title-color: var(--clr-very-dark-blue);
+    --text-aside: var(--clr-orange);
+    --text-color: var(--clr-orange-dark);
+
+    --btn-color: var(--clr-off-white);
+    --btn-color-hover: var(--clr-orange);
+    --aside-bg: var(--clr-very-dark-blue);
+    --btn-bg: var(--clr-orange-dark);
+  }
+}
+
+@layer reset {
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    background-color: var(--clr-off-white);
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* - Style Général ------------------ */
+@layer global {
+  body {
+    padding: 1rem;
+    font-family: var(--ff-primary);
+    color: var(--title-color);
+  }
+
+  .container {
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+}
+
+@layer components {
+  /* - Header ------------------ */
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1.65em;
+  }
+
+  /* - Main-nav */
+
+  .main-nav {
+    /* Position fixe */
+
+    /* top:0  right:0 bottom:0 left:15% en une seule propriété */
+
+    /* Disposition en colonne centrée */
+
+    /* Arrière plan */
+
+    /* Translation de 100% de la largeur de l'élément à droite */
+
+    /* Transition de la translation */
+  }
+  .main-nav__list {
+    /* Disposition en colonne */
+
+    /* Gouttiére de 2x16px */
+
+    /* Taille de la police */
+
+    /* Couleur du texte */
+  }
+
+  .main-nav__link {
+    /* Marge intérieure de 1em */
+  }
+
+  .main-nav__link:hover {
+    /* Couleur du texte */
+  }
+  /* Réadaptation du menu pour les écran > M */
+  @media (min-width: 54em) {
+    .main-nav {
+      /* Retour à la valeur initiale de la propriété position*/
+
+      /* Arrière plan transparent */
+
+      /* Réinitialise la translation */
+    }
+
+    .main-nav__list {
+      /* Position en ligne */
+
+      /* Gouttiére de 2x16px */
+
+      /* Redéfinir la taille de la police */
+
+      /* Couleur du texte */
+    }
+
+    .main-nav__link {
+      /* Marge intérieure nulle */
+    }
+  }
+
+  /* Menu Off canvas */
+
+  .burger {
+    /* Positionne le burger sur un layer 10 */
+
+    /* Curseur pointer */
+
+    @media (min-width: 54em) {
+      & {
+        /* Masquer le burger */
+      }
+    }
+  }
+
+  .burger__line:nth-child(1) {
+    /* Variable déterminant la position en y : augmente de 9px (7px position d'origine + 9px = 16px centre du svg */
+
+    /* Variable déterminant la rotation 45deg */
+
+    /* Orignie de la transformation (16px,7px) centre de la ligne  */
+
+    /* Temporisation retour : attente .2s > rotate durée .2s > translation durée .2s   */
+  }
+
+  .burger__line:nth-child(2) {
+    /* Temporisation retour : .4s d'attente > opacité .2s */
+  }
+
+  .burger__line:nth-child(3) {
+    /* Variable déterminant la position en y : diminue de 9px (25px position d'origine - 9px = 16px centre du svg */
+
+    /* Variable déterminant la rotation -45deg */
+
+    /* Orignie de la transformation (16px,25px)  */
+
+    /* Temporisation retour : attente .2s > rotate durée .2s > translation durée .2s   */
+  }
+
+  /* Au survol du burger la ligne 1 et 3 change de couleur de stroke */
+  .burger:hover :where(:nth-child(1), :nth-child(3)) {
+  }
+
+  /* - Checked */
+
+  /* Pour toutes les lignes */
+  [type="checkbox"]:checked ~ .label .burger .burger__line {
+    /* Applique la translation et la rotation à partir des variables privée de chaque ligne */
+
+    /* Transition aller : après .2s d'attente > translate d'une durée de .2s > rotation d'une durée de .2s */
+  }
+
+  /* Pour la ligne 2 */
+  [type="checkbox"]:checked ~ .label .burger .burger__line:nth-child(2) {
+    /* Opacité 0 */
+
+    /* Transition aller : opacité de .2s sans delay */
+  }
+
+  /* Pour le menu */
+  [type="checkbox"]:checked ~ .main-nav {
+    /* Réinitialise la translation */
+  }
+}

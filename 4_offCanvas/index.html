@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <div>Logo</div>
+          <span class="sr-only">Nom de la compagnie</span>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="sr-only" />
+        <label for="menu-toggle" class="label">
+          <svg class="burger" viewBox="0 0 32 32" width="32" height="32">
+            <!-- Créer une ligne y=7 -->
+
+            <line
+              class="burger__line"
+              x1="2"
+              y1="16"
+              x2="30"
+              y2="16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+            <!-- Créer une ligne y=25 -->
+          </svg>
+          <span class="sr-only">Menu</span>
+        </label>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Home</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">New</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Popular</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Trending</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Categories</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
