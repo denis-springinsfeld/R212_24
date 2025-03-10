@@ -146,7 +146,7 @@
   }
 
   .main-nav__link {
-    /* Marge intérieure de 1em */
+    /* Marge intérieure de .2em haut/bas et 1em droite/gauche */
   }
 
   .main-nav__link:hover {
