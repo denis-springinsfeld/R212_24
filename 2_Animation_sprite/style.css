@@ -1,0 +1,76 @@
+@layer reset, base, corgi;
+
+@layer corgi {
+  .corgi {
+    /* 1/ Paramétrer le nom de l'animation */
+
+    /* 2/ Paramétrer la durée de l'animation  1s*/
+
+    /* 3/ Paramétrer la méthode d'interpolation */
+
+    /* 4/ Paramétrer le nombre de répétitions */
+
+    /* 4bis/ L'animation est associé à la position du scroll */
+
+    aspect-ratio: 1;
+    display: block;
+    object-fit: cover;
+    object-position: 0 0;
+    width: 8rem;
+  }
+
+  @keyframes run {
+    to {
+      object-position: 100% 0;
+    }
+  }
+}
+
+@layer base {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+  }
+
+  .spacer {
+    height: 500vh;
+  }
+}
+
+@layer reset {
+  /* Reset */
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+}
+
+/* 
+`animation-name` : le nom de l’animation à utiliser ;
+
+`animation-duration` : la durée complète de l’animation ;
+
+`animation-delay` : le délai avant que l’animation ne se lance ;
+
+`animation-timing-function` : la méthode d’interpolation (départ rapide, lent…) entre chaque étape;
+
+`animation-iteration-count` : le nombre de fois où l’animation est répétée. Le mot-clé `infinite` permet d’effectuer l’animation en boucle;
+
+`animation-direction` normal | reverse | alternate | alternate-reverse : permet de jouer l’animation en sens inverse;
+
+`animation-fill-mode` forward | backward | both : état des éléments avant et après l’exécution de l’animation;
+
+`animation-play-state` running | paused : permet de mettre l’animation en pause ;
+
+`animation` : c’est la propriété raccourcie des huit précédentes.
+
+> **NEW** > `animation-timeline: scroll()` : associe l'animation à la position de défilement de la page. */

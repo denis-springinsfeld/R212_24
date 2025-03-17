@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inter:wght@300;500;700&display=swap");
+
+/* Variables ======================================================= */
+
+:root {
+  /* Primitive Tokens */
+  --clr-dark: #494636;
+  --clr-light: #f8eeb9;
+  --clr-blue: #2b7a78;
+
+  --ff-primary: "Amatic SC", cursive;
+
+  /* Sementic Tokens */
+  --clr-forground: var(--clr-dark);
+  --clr-background: var(--clr-light);
+
+  --clr-body: var(--clr-blue);
+
+  --tps: 5s;
+  --delay: 0.3s;
+}
+
+@layer reset {
+  /* Reset ======================================================= */
+  /* à partir https://piccalil.li/blog/a-more-modern-css-reset/  */
+
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent font size inflation */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Remove default margin in favour of better control in authored CSS */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* Set shorter line heights on headings and interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Balance text wrapping on headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer base {
+  /* Base 
+========================================== */
+
+  .page {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+
+    font-family: var(--ff-primary);
+    color: var(--clr-text);
+    text-align: center;
+
+    background-image: url("../assets/paper.jpg");
+    background-color: var(--clr-background);
+    background-blend-mode: multiply;
+  }
+}
+
+/* -----------------------------------------
+  *  Creature
+  *  ---  
+--------------------------------------------- */
+
+/* Creature container ========================================== */
+
+.creature-collection {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.creature-box {
+  max-width: 16.25rem;
+  margin: 0 auto;
+  padding: 1em 2em;
+
+  user-select: none;
+}
+
+/* Creature  
+============================================ */
+
+@layer creature {
+  .creature {
+    &:active {
+    }
+
+    &:hover {
+    }
+
+    .creature__face {
+      .creature__eyes {
+        .creature__eye {
+        }
+      }
+      .creature__moustache:before,
+      .creature__moustache:after {
+      }
+
+      .creature__moustache:before {
+      }
+      .creature__mouth {
+      }
+    }
+  }
+  .creature-shadow {
+  }
+  .creature-name {
+  }
+}
+
+/* Keyframes 
+============================================ */
+/* -- bobble : Animation par défaut--- */
+
+@keyframes bobble {
+}

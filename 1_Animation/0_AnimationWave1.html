@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice Animation_1 AnimationWave1</title>
+  </head>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a212e;
+      /* Paramétrer animation */
+    }
+
+    .waves {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+    }
+
+    .waves::before,
+    .waves::after {
+      content: "";
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background: white;
+      border-radius: 50%;
+      /* Paraméter animation */
+    }
+
+    .waves::after {
+      opacity: 0;
+      /* Paramétrer delay */
+    }
+
+    @keyframes wave-animate {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+    @keyframes color-loop {
+      0% {
+        background: #2cab5b;
+      }
+      25% {
+        background: #fabc03;
+      }
+      50% {
+        background: #ed4b40;
+      }
+      75% {
+        background: #4286f3;
+      }
+      100% {
+        background: #2cab5b;
+      }
+    }
+  </style>
+  <body>
+    <div class="waves"></div>
+  </body>
+</html>
