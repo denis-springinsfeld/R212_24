@@ -147,29 +147,37 @@
 
 @layer creature {
   .creature {
+    /* Body créature */
     &:active {
     }
 
     &:hover {
     }
 
+    /* Face créature */
     .creature__face {
+      /* Yeux créature */
       .creature__eyes {
+        /* Oeil créature */
         .creature__eye {
         }
       }
-      .creature__moustache:before,
-      .creature__moustache:after {
+      /* Moustache */
+      .creature__moustache::before,
+      .creature__moustache::after {
       }
 
-      .creature__moustache:before {
+      .creature__moustache::before {
       }
+      /* Bouche Créature */
       .creature__mouth {
       }
     }
   }
+  /* Ombre Créature */
   .creature-shadow {
   }
+  /* Nom Créature */
   .creature-name {
   }
 }
