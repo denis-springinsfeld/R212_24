@@ -124,23 +124,24 @@
 
 /* Creature container ========================================== */
 
-.creature-collection {
-  /* display: grid;
+@layer container {
+  .creature-collection {
+    /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); */
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 90rem;
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  .creature-box {
+    max-width: 16.25rem;
+    margin: 0 auto;
+    padding: 1em 2em;
+
+    user-select: none;
+  }
 }
-
-.creature-box {
-  max-width: 16.25rem;
-  margin: 0 auto;
-  padding: 1em 2em;
-
-  user-select: none;
-}
-
 /* Creature  
 ============================================ */
 
